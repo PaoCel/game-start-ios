@@ -18,7 +18,7 @@ private func extractURLToken(_ raw: String) -> String {
     return String(token).removingPercentEncoding ?? String(token)
   }
 
-  if let base = URL(string: "https://codex.local"),
+  if let base = URL(string: "https://nfc.local"),
      let relative = URL(string: trimmed, relativeTo: base),
      let token = relative.path.split(separator: "/").last {
     return String(token).removingPercentEncoding ?? String(token)
